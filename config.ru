@@ -1,2 +1,4 @@
 require './app'
-run Flamingo
+run Sinatra::Application
+
+
