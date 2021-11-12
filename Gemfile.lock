@@ -1,17 +1,30 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    concurrent-ruby (1.1.9)
+    connection_pool (2.2.5)
+    hamster (3.0.0)
+      concurrent-ruby (~> 1.0)
+    link_header (0.0.8)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    net-http-persistent (4.0.1)
+      connection_pool (~> 2.2)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
+    rdf (3.1.15)
+      hamster (~> 3.0)
+      link_header (~> 0.0, >= 0.0.8)
     ruby2_keywords (0.0.5)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
+    sparql-client (3.1.2)
+      net-http-persistent (~> 4.0, >= 4.0.1)
+      rdf (~> 3.1)
     tilt (2.0.10)
 
 PLATFORMS
@@ -19,6 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   sinatra
+  sparql-client
 
 BUNDLED WITH
    2.2.31
